@@ -11,8 +11,8 @@
 		height: 'auto',
 		weekends: true,
 		events: {
-    // url: 'https://secured.sirvoy.com/ical/16b1f029-0b65-476d-854a-a52733013cd1',
-    url: '/sirvoy_ical_16b1f029-0b65-476d-854a-a52733013cd1.ics',
+    url: 'https://secured.sirvoy.com/ical/16b1f029-0b65-476d-854a-a52733013cd1',
+    // url: '/sirvoy_ical_16b1f029-0b65-476d-854a-a52733013cd1.ics',
     format: 'ics'
   }
 	};
