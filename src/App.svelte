@@ -18,6 +18,24 @@
 	};
 	let calendarComponentRef;
 
+const fetchOptions = {
+  method: 'GET',
+  mode: 'no-cors'
+};
+fetch('https://secured.sirvoy.com/ical/16b1f029-0b65-476d-854a-a52733013cd1', fetchOptions).then(response => {
+	console.log(response);
+	return response.blob();
+})
+   .then(blob => {
+      let reader = new FileReader();
+      reader.onload = () => {
+        const type = blob.type;
+		console.log(type);
+       console.log(reader.result);
+   }
+   reader.readAsDataURL(blob) 
+});
+
 </script>
 
 <style>
@@ -44,6 +62,6 @@
 <div class="demo-app">
 
 	<div class="demo-app-calendar">
-		<FullCalendar bind:this={calendarComponentRef} {options} />
+		<!-- <FullCalendar bind:this={calendarComponentRef} {options} /> -->
 	</div>
 </div>
